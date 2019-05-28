@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatRoom</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/chat.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <script id="list_chat_Temp" type="text/x-jQuery-tmpl">
+        <li class="list-group-item">
+            <div class="checkbox">
+                <label>${Name}</label>
+                <label>${Date}</label>
+                <label>${Content}</label>
+            </div>
+        </li>
+    </script>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="row placeholder" id="startName"></div>
+        <h2 class="page-header" >聊天室 <button class="btn btn-primary" data-toggle="modal" data-target="#nameModal"><span>开始聊天</span></button></h2>
+        <div class="input-group" style="max-width: 500px">
+            <input type="text" class="form-control" id="chat_info" placeholder="请输入聊天内容">
+            <span class="input-group-btn" id="send_mes">
+                <button class="btn btn-primary" type="button" onclick="SendMes()" id="btnSendMes"><span>发送</span></button>
+            </span>
+        </div>
+        <div class="row">
+            <div class="panel-body" style="max-width: 1000px">
+                <ul id="list_chat" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 400px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="chatModalLabel">请输入发言人姓名</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-signin">
+                    <div class="form-group"class="form-signin">
+                        <label for="recipient-name" class="control-label">发言人姓名：</label>
+                        <input type="text" id="sendName" class="form-control" placeholder="不能为空！" id="sendName"required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" id="btn_NameConfirm" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <footer>
+        <p class="pull-right"><a href="#">返回顶部</a></p>
+        <p align="center">&copy; 2017 Designed by SiyinKong, Inc. &middot; <a href="#">版权所有</a>
+    </footer>
+</div><!-- /.container -->
+
+</body>
+</html>
