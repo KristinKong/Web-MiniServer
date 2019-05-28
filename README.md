@@ -1,5 +1,11 @@
 # Web-MiniServer
 Some examples about server which include a login page and a very simple chatroom<br>
+## Run enviroment:
+  1. Pycharm+anoconda2<br>
+  2. Firefox<br>
+  3. Mysql5.7.12<br>
+### You must configure the enviroment before run, besides, make sure you have imported the sql script before running.
+Simply put that you need to create a database as well as define some basic options.<br>
 ## The contents in the folder are described as follow:
   1. The files in ex-5/static include CSS and JS which run in the client.<br>
   2. The files in ex-5/templates are the html pages show in browser.<br>
